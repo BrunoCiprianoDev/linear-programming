@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/sidebar.css">
+    <meta name="author" content="Bruno Cipriano Ribeiro">
+
+    <style>
+        .img-area-tp1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="../assets/icon.png">
+        <div id="header-nav">
+            <ul>
+            </ul>
+        </div>
+    </header>
+    <div id="sidebar">
+        <ul>
+            <li><a href="../index.html"><img src="../assets/home.png"><span>Início</span></span></a></li>
+            <li><a href=""><img src="../assets/one.png"><span>Introdução</span></span></a></li>
+            <li><a href="resolucao-grafica.html"><img src="../assets/two.png"><span>Resolução gráfica</span></span></a>
+            </li>
+            <li><a href="resolucao-solver.html"><img src="../assets/three.png"><span>Utilizando o
+                        solver</span></span></a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <h1>Introdução</h1>
+        <h2>Principais conceitos sobre a programação Linear</h2>
+        <p><span class="first-letter"></span>Programação Linear
+            A programação Linear é uma ferramenta da computação focada na resolução de problemas envolvendo recursos
+            limitados para atender um determinado objetivo(Função objetiva), em geral, maximizar lucros ou minimizar
+            custos.
+        </p>
+        <p><span class="first-letter"></span>Essas informações são apresentadas em forma de equações/inequações
+            lineares, uma para cada recurso. O conjunto dessas equações e/ou inequações, denomina-se "Restrições do
+            Modelo". Normalmente se tem inúmeras maneiras de distribuir os recursos escassos entre as diversas
+            atividades em estudo, bastando que essas distribuições estejam coerentes com as restrições do modelo.</p>
+        <div class="img-area-tp1">
+            <img src="../imagens/introducao/introducao01.png" />
+        </div>
+        <hr>
+        <p><span class="first-letter"></span>Para resolver problemas desse tipo é fundamental compreender 3 pontos
+            principais:</p>
+        <div id="list-box">
+            <p>1- Qual é função objetivo?</p>
+            <p>2- Quais são as funções de restrição?</p>
+            <p>3- Qual o domínio das váriaveis do universo do problema?</p>
+        </div>
+        <p><span class="first-letter"></span> Veja o exemplo abaixo:</p>
+        <p><span class="first-letter"></span>Uma empresa pode fabricar dois produtos(1 e 2).
+            Na fabricação do produto 1 a empresa consome diariamente recursos limitados de produção:</p>
+        <div id="list-box">
+            <p>9 horas-homem</p>
+            <p>3 horas-máquina</p>
+        </div>
+        <p><span class="first-letter"></span>Na fabricação do produto 2 a empresa consome diariamente recursos limitados
+            de produção:</p>
+        <div id="list-box">
+            <p>1 hora-homem</p>
+            <p>1 hora-máquina</p>
+        </div>
+        <p><span class="first-letter"></span>A empresa dispõe diariamente de 18 horas-homem e 12 horas-máquina para um
+            período de produção. </p>
+        <div id="list-box">
+            <p>Sabe-se que os lucros líquidos dos produtos são $4 e $1 respectivamente.</p>
+        </div>
+        <div id="solve-area">
+            <p><span class="first-letter"></span>Para este problema, objetivo é alcançar o maior lucro possivel na
+                produção dos dois produtos(X1, X2).Dessa forma, a função objetiva é: </p>
+            <div id="box-code">
+                <p>Zmax = 4X1 + 1X1 (Máximização dos lucros)</p>
+            </div>
+            <p><span class="first-letter"></span>As funções de restrição são definidas como:</p>
+            <div id="box-code">
+                <div id="list-box">
+                    <p>9X1 + X2 &le; 18 (Limitações Horas homem)</p>
+                    <p>3X1 + X2 &le; 12 (Limitações Horas máquina)</p>
+                </div>
+            </div>
+            <p><span class="first-letter"></span>Funções que determinam o domínio do problema:</p>
+            <div id="box-code">
+                <div id="list-box">
+                    <p>X1 &ge; 0 (A produção de P1 deve ser maior ou igual a zero)</p>
+                    <p>X2 &ge; 0 (A produção de P2 deve ser maior ou igual a zero)</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="autor-area">
+            <p>Autor: Bruno Cipriano Ribeiro</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

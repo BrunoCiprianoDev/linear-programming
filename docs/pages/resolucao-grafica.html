@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/sidebar.css">
+    <meta name="author" content="Bruno Cipriano Ribeiro">
+
+    <style>
+        #list-box p {
+            margin-bottom: 1em;
+        }
+
+        #sub-list {
+            border: 1px solid black;
+            padding: 1em;
+            padding-left: 2em;
+            margin-bottom: 1em;
+        }
+
+        .img-area-tp1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .img-area-tp1 img {
+            display: flex;
+            width: 70%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="../assets/icon.png">
+        <div id="header-nav">
+            <ul>
+            </ul>
+        </div>
+    </header>
+    <div id="sidebar">
+        <ul>
+            <li><a href="../index.html"><img src="../assets/home.png"><span>Início</span></span></a></li>
+            <li><a href="introducao.html"><img src="../assets/one.png"><span>Introdução</span></span></a></li>
+            <li><a href=""><img src="../assets/two.png"><span>Resolução gráfica</span></span></a>
+            </li>
+            <li><a href="resolucao-solver.html"><img src="../assets/three.png"><span>Utilizando o
+                        solver</span></span></a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <h1>Resolução gráfica</h1>
+        <h2>Como resolver problemas de Programação Linear utilizando gráficos</h2>
+        <p><span class="first-letter"></span>Uma fábrica de computadores produz 2 modelos de computador: A e B.</p>
+        <div id="list-box">
+            <ul>
+                <li>
+                    <p>O modelo A fornece um lucro de R$ 180,00 e o B de R$300,00.</p>
+                </li>
+                <li>
+                    <p>O modelo A requer, na sua produção, 1 gabinete pequeno e 1 unidade de
+                        disco.</p>
+                </li>
+                <li>
+                    <p>O modelo B requer 1 gabinete grande e 2 unidades de disco.</p>
+                </li>
+                <li>
+                    <p>Existem no estoque:</p>
+                    <div id="sub-list">
+                        <p>60 unidades do gabinete pequeno</p>
+                        <p>50 do gabinete grande</p>
+                        <p>120 unidades de disco.</p>
+                    </div>
+                </li>
+            </ul>
+            <p><span class="first-letter"></span>Pergunta-se: qual deve ser o esquema de produção que maximiza o lucro?
+            </p>
+        </div>
+        <div id="solve-area">
+            <p><span class="first-letter"></span>Para este problema, objetivo é alcançar o maior lucro possivel na
+                produção dos computadores A e B, que serão representados algebricamente por X1 e X2,
+                respectivamente. Dessa forma, a função objetiva é: </p>
+            <div id="box-code">
+                <p>Zmax = 180X1 + 300X2 (Máximização dos lucros)</p>
+            </div>
+            <p><span class="first-letter"></span>As funções de restrição são definidas como:</p>
+            <div id="box-code">
+                <div id="list-box">
+                    <p>X1 &le; 60 (Existem 60 gabinetes pequenos)</p>
+                    <p>X2 &le; 50 (Existem 50 gabinetes grandes)</p>
+                    <p>X1 + 2X2 &le; 120 (Existem 120 unidades de disco)</p>
+                </div>
+            </div>
+            <p><span class="first-letter"></span>Funções que determinam o domínio do problema:</p>
+            <div id="box-code">
+                <div id="list-box">
+                    <p>X1 &ge; 0 (A produção de computadores A deve ser maior ou igual a zero)</p>
+                    <p>X2 &ge; 0 (A produção de computadores B deve ser maior ou igual a zero)</p>
+                </div>
+            </div>
+            <div class="img-area-tp1">
+                <img src="../imagens/resolucaoGrafica/gráficoGeoGeogrebra.png" />
+            </div>
+            <p><span class="first-letter"></span>Para resolver gráficamente, basta traçar uma reta gerada pela função
+                objetiva que passe em um ponto aleatório. Nesse caso, foi considerado o ponto igual a 15000. </p>
+            <div class="img-area-tp1">
+                <img src="../imagens/resolucaoGrafica/grafico15000.png" />
+            </div>
+            <p><span class="first-letter"></span>O objetivo aqui verificar é gráficamente em qual ponto a reta objetiva
+                passe pelo ponto do lucro máximo, dentro do domínio do problema. Nesse caso, o lucro máximo é definido
+                pelo valor 19800, onde a reta objetiva passa pela seguinte interseção entre as retas.</p>
+            <div class="img-area-tp1">
+                <img src="../imagens/resolucaoGrafica/grafico19800.png" />
+            </div>
+        </div>
+        <hr>
+        <div id="autor-area">
+            <p>Autor: Bruno Cipriano Ribeiro</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
